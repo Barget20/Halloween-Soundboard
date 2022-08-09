@@ -59,6 +59,7 @@
     <audio data-key="76" src="./sounds/torture-screams-and-moans-7091.mp3"></audio>
 
     <script>
+
         //listens for: pressing down of key button, the event (e = event), 
         
         function playSound(e) {
@@ -81,6 +82,7 @@
         const keys = Array.from(document.querySelectorAll('.key'));
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
         window.addEventListener('keydown', playSound);
+
     </script>
    
 </body>
