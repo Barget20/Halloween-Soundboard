@@ -4,6 +4,14 @@ html {
     background-size: cover;
 }
 
+h1 {
+    font-size: 5rem;
+    text-align: center;
+    color: #ff872C;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 3px 0 #ffa12c;
+}
+
 body, html {
     margin: 0;
     padding: 0;
