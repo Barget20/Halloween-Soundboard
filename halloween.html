@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Halloween Sound Board</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="./images/Logo draft-v1.png" type="image/png">
+
+<style>
+    body{
+        font-family: "Lato", sans-serif;
+        color: white;
+        background-image: url(./images/halloween-5596921_1920.jpg);
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: large;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }	
+</style>
+</head>
+
+<body>
+<div id="mySidenav" class="sidenav">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="index.html">Home</a>
+<a href="halloween.html">Halloween</a>
+<a href="christmas.html">Christmas</a>
+<a href="#">Misc</a>
+</div>
+
+<span style="font-size:35px;cursor:pointer" text-color="white" onclick="openNav()">&#9776; Menu</span>
+<script>
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<body>
+    <h1> Halloween Sound Board</h1>
+
+    <div class="halloween_keys">
+
+        <div data-key="65" class="hallo_key">
+            <kbd>A </kbd>
+            <span class="sound">Am I Dead?</span>
+        </div>
+        <div data-key="83" class="hallo_key">
+            <kbd>S </kbd>
+            <span class="sound">Boo & Laugh</span>
+        </div>
+        <div data-key="68" class="hallo_key">
+            <kbd>D </kbd>
+            <span class="sound">Crime Scene</span>
+        </div>
+        <div data-key="70" class="hallo_key">
+            <kbd>F </kbd>
+            <span class="sound">Halloween Terror</span>
+        </div>
+        <div data-key="71" class="hallo_key">
+            <kbd>G </kbd>
+            <span class="sound">Eerie Laugh</span>
+        </div>
+        <div data-key="72" class="hallo_key">
+            <kbd>H </kbd>
+            <span class="sound">Chainsaw</span>
+        </div>
+        <div data-key="74" class="hallo_key">
+            <kbd>J </kbd>
+            <span class="sound">Laughing Ghost</span>
+        </div>
+        <div data-key="75" class="hallo_key">
+            <kbd>K </kbd>
+            <span class="sound">The Build</span>
+        </div>
+        <div data-key="76" class="hallo_key">
+            <kbd>L </kbd>
+            <span class="sound">Torture Screams</span>
+        </div>
+    </div>
+
+    <audio data-key="65" src="./sounds/am-i-dead-32170.mp3"></audio>
+    <audio data-key="83" src="./sounds/boo-and-laugh-7060.mp3"></audio>
+    <audio data-key="68" src="./sounds/creepy-crime-sound-7541.mp3"></audio>
+    <audio data-key="70" src="./sounds/halloween-1-112015.mp3"></audio>
+    <audio data-key="71" src="./sounds/horror-1-13561.mp3"></audio>
+    <audio data-key="72" src="./sounds/horror-5-13594.mp3"></audio>
+    <audio data-key="74" src="./sounds/laughing-ghost-horror-sounds-8293.mp3"></audio>
+    <audio data-key="75" src="./sounds/Reflex Nightmare.mp3"></audio>
+    <audio data-key="76" src="./sounds/torture-screams-and-moans-7091.mp3"></audio>
+
+    <script>
+
+        //listens for: pressing down of key button, the event (e = event), 
+        
+        function playSound(e) {
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+            if(!audio) return; //stops the function from running all together
+            audio.currentTime= 0; //restarts to beginning, allows for multi tapping 
+            audio.play();
+            key.classList.add('hallo_playing');
+            // key.classList.remove('playing');
+            // key.classList.toggle('playing');
+        };
+
+        function removeTransition(e) {
+            if (e.propertyName !== 'transform') return; //skips it if it's not a transform
+            e.target.classList.remove('hallo_playing');
+        }
+
+        const keys = Array.from(document.querySelectorAll('.key'));
+        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+        window.addEventListener('keydown', playSound);
+
+    </script>
+   
+</body>
+
+</html>

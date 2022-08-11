@@ -1,15 +1,24 @@
 html {
-    font-size: 10px;
-    background: url('./images/halloween-5596921_1920.jpg'); 
+    font-size: 10px; 
     background-size: cover;
 }
 
+
+
 h1 {
-    font-size: 5rem;
+    font-size: 10rem;
     text-align: center;
     color: #ff872C;
     font-family: 'Courier New', Courier, monospace;
     text-shadow: 3px 0 #ffa12c;
+}
+
+p {
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: beige;
 }
 
 body, html {
@@ -18,7 +27,9 @@ body, html {
     font-family: sans-serif;
 }
 
-.keys {
+/* Halloween */
+
+.halloween_keys {
     display: flex;
     flex: 1;
     min-height: 100vh;
@@ -26,7 +37,7 @@ body, html {
     justify-content: center;
 }
 
-.key {
+.hallo_key {
     border: .4rem solid black;
     border-radius: .5rem;
     margin: 1rem;
@@ -39,7 +50,7 @@ body, html {
     text-shadow: 0 0 .5rem #ffa12c;
 }
 
-.playing {
+.hallo_playing {
     transform: scale(1.1);
     border-color: #fe612C;
     box-shadow: 0 0 1rem #ffa12c;
@@ -55,4 +66,78 @@ kbd {
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: #fe612C;
+}
+
+/* Christmas */
+
+.christmas_keys {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.xmas_key {
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: #46ba46;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem #ff3e2c;
+}
+
+.xmas_playing {
+    transform: scale(1.1);
+    border-color: #46ba46;
+    box-shadow: 0 0 1rem #7fe07f;
+}
+
+kbd {
+    display: block;
+    font-size: 4rem;
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #fe612C;
+}
+
+/*Navigation */  
+
+.page-header {
+	display: flex;
+	width: 100%;
+	padding: 20px;
+}
+.page-header__item {
+	flex: 0 1 200px;
+}
+.page-header__item:last-child {
+	flex-grow: 1;
+	text-align: right;
+}
+.navigation-list {
+	list-style-type: none;
+}
+
+.navigation-list li {
+	display: inline-block;
+	margin-left: 15px;
+}
+.navigation-list__item--active {
+	text-decoration: none;
+}	
+
+.navigation-list__item_home {
+	text-decoration: none;
+}
+.navigation-list__item_home--active {
+	text-decoration: none;
 }
