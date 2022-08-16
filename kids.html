@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="UTF-8">
-        <title>Halloween Sound Board</title>
+        <title>Kid's Fun Board</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" href="./images/Logo draft-v1.png" type="image/png">
 
@@ -10,7 +10,7 @@
     body{
         font-family: "Lato", sans-serif;
         color: white;
-        background-image: url(./images/halloween-5596921_1920.jpg);
+        background-image: url(./images/girl-3194977_1920.jpg);
     }
 
     .sidenav {
@@ -75,57 +75,57 @@ document.getElementById("mySidenav").style.width = "0";
 </script>
 
 <body>
-    <h1> Halloween Sound Board</h1>
+    <h1> Kid's Fun Board</h1>
 
-    <div class="halloween_keys">
+    <div class="kids_sound_keys">
 
-        <div data-key="65" class="hallo_key">
+        <div data-key="65" class="kids_key">
             <kbd>A </kbd>
-            <span class="sound">Am I Dead?</span>
+            <span class="sound">#</span>
         </div>
-        <div data-key="83" class="hallo_key">
+        <div data-key="83" class="kids_key">
             <kbd>S </kbd>
-            <span class="sound">Boo & Laugh</span>
+            <span class="sound">#</span>
         </div>
-        <div data-key="68" class="hallo_key">
+        <div data-key="68" class="kids_key">
             <kbd>D </kbd>
-            <span class="sound">Crime Scene</span>
+            <span class="sound">#</span>
         </div>
-        <div data-key="70" class="hallo_key">
+        <div data-key="70" class="kids_key">
             <kbd>F </kbd>
-            <span class="sound">Halloween Terror</span>
+            <span class="sound">#</span>
         </div>
-        <div data-key="71" class="hallo_key">
+        <div data-key="71" class="kids_key">
             <kbd>G </kbd>
-            <span class="sound">Eerie Laugh</span>
+            <span class="sound">#</span>
         </div>
-        <div data-key="72" class="hallo_key">
+        <div data-key="72" class="kids_key">
             <kbd>H </kbd>
-            <span class="sound">Chainsaw</span>
+            <span class="sound">#</span>
         </div>
-        <div data-key="74" class="hallo_key">
+        <div data-key="74" class="kids_key">
             <kbd>J </kbd>
-            <span class="sound">Laughing Ghost</span>
+            <span class="sound">#</span>
         </div>
-        <div data-key="75" class="hallo_key">
+        <div data-key="75" class="kids_key">
             <kbd>K </kbd>
-            <span class="sound">The Build</span>
+            <span class="sound">#</span>
         </div>
-        <div data-key="76" class="hallo_key">
+        <div data-key="76" class="kids_key">
             <kbd>L </kbd>
-            <span class="sound">Torture Screams</span>
+            <span class="sound">#</span>
         </div>
     </div>
 
-    <audio data-key="65" src="./sounds/am-i-dead-32170.mp3"></audio>
-    <audio data-key="83" src="./sounds/boo-and-laugh-7060.mp3"></audio>
-    <audio data-key="68" src="./sounds/creepy-crime-sound-7541.mp3"></audio>
-    <audio data-key="70" src="./sounds/halloween-1-112015.mp3"></audio>
-    <audio data-key="71" src="./sounds/horror-1-13561.mp3"></audio>
-    <audio data-key="72" src="./sounds/horror-5-13594.mp3"></audio>
-    <audio data-key="74" src="./sounds/laughing-ghost-horror-sounds-8293.mp3"></audio>
-    <audio data-key="75" src="./sounds/Reflex Nightmare.mp3"></audio>
-    <audio data-key="76" src="./sounds/torture-screams-and-moans-7091.mp3"></audio>
+    <audio data-key="65" src="#"></audio>
+    <audio data-key="83" src="#"></audio>
+    <audio data-key="68" src="#"></audio>
+    <audio data-key="70" src="#"></audio>
+    <audio data-key="71" src="#"></audio>
+    <audio data-key="72" src="#"></audio>
+    <audio data-key="74" src="#"></audio>
+    <audio data-key="75" src="#"></audio>
+    <audio data-key="76" src="#"></audio>
 
     <script>
 
@@ -140,11 +140,11 @@ document.getElementById("mySidenav").style.width = "0";
             key.classList.add('hallo_playing');
             // key.classList.remove('playing');
             // key.classList.toggle('playing');
-        };
+        };a
 
         function removeTransition(e) {
             if (e.propertyName !== 'transform') return; //skips it if it's not a transform
-            e.target.classList.remove('hallo_playing');
+            e.target.classList.remove('kids_playing');
         }
 
         const keys = Array.from(document.querySelectorAll('.key'));
