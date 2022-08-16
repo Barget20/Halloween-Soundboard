@@ -1,5 +1,5 @@
-# Halloween Soundboard
-A Halloween Soundboard that can be used by streamers who do not have a stream deck or something similar but would still like to add special sound effects to stream. The webpage can be shrunk down and hidden in the corner of your OBS. These sound clips are copyright free samples. Although feel free to replace the sound clips yourself. I would like to add more/better sound clips in the future.
+# Holiday Soundboard
+A Holiday Soundboard that can be used by streamers who do not have a stream deck or something similar but would still like to add special sound effects to stream. The webpage can be shrunk down and hidden in the corner of your OBS. These sound clips are copyright free samples. Although feel free to replace the sound clips yourself. I would like to add more/better sound clips in the future.
 
 <h1> Image </h1>
 
