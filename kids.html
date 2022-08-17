@@ -9,8 +9,9 @@
 <style>
     body{
         font-family: "Lato", sans-serif;
-        color: white;
+        color: yellow;
         background-image: url(./images/girl-3194977_1920.jpg);
+        background-size: cover;
     }
 
     .sidenav {
@@ -36,7 +37,7 @@
     }
 
     .sidenav a:hover {
-        color: #f1f1f1;
+        color: yellow;
     }
 
     .sidenav .closebtn {
@@ -75,49 +76,49 @@ document.getElementById("mySidenav").style.width = "0";
 </script>
 
 <body>
-    <h1> Kid's Fun Board</h1>
+    <h1 style="color:yellow"> Kid's Fun Board</h1>
 
     <div class="kids_sound_keys">
 
         <div data-key="65" class="kids_key">
             <kbd>A </kbd>
-            <span class="sound">#</span>
+            <span class="kids_sound_text">Boo & Laugh</span>
         </div>
         <div data-key="83" class="kids_key">
             <kbd>S </kbd>
-            <span class="sound">#</span>
+            <span class="kids_sound_text">#</span>
         </div>
         <div data-key="68" class="kids_key">
             <kbd>D </kbd>
-            <span class="sound">#</span>
+            <span class="kids_sound_text">#</span>
         </div>
         <div data-key="70" class="kids_key">
             <kbd>F </kbd>
-            <span class="sound">#</span>
+            <span class="kids_sound_text">#</span>
         </div>
         <div data-key="71" class="kids_key">
             <kbd>G </kbd>
-            <span class="sound">#</span>
+            <span class="kids_sound_text">#</span>
         </div>
         <div data-key="72" class="kids_key">
             <kbd>H </kbd>
-            <span class="sound">#</span>
+            <span class="kids_sound_text">#</span>
         </div>
         <div data-key="74" class="kids_key">
             <kbd>J </kbd>
-            <span class="sound">#</span>
+            <span class="kids_sound_text">#</span>
         </div>
         <div data-key="75" class="kids_key">
             <kbd>K </kbd>
-            <span class="sound">#</span>
+            <span class="kids_sound_text">#</span>
         </div>
         <div data-key="76" class="kids_key">
             <kbd>L </kbd>
-            <span class="sound">#</span>
+            <span class="kids_sound_text">#</span>
         </div>
     </div>
 
-    <audio data-key="65" src="#"></audio>
+    <audio data-key="65" src="./sounds/boo-and-laugh-7060.mp3"></audio>
     <audio data-key="83" src="#"></audio>
     <audio data-key="68" src="#"></audio>
     <audio data-key="70" src="#"></audio>
@@ -137,17 +138,15 @@ document.getElementById("mySidenav").style.width = "0";
             if(!audio) return; //stops the function from running all together
             audio.currentTime= 0; //restarts to beginning, allows for multi tapping 
             audio.play();
-            key.classList.add('hallo_playing');
-            // key.classList.remove('playing');
-            // key.classList.toggle('playing');
-        };a
+            key.classList.add('kids_playing');
+        };
 
         function removeTransition(e) {
             if (e.propertyName !== 'transform') return; //skips it if it's not a transform
             e.target.classList.remove('kids_playing');
         }
 
-        const keys = Array.from(document.querySelectorAll('.key'));
+        const keys = Array.from(document.querySelectorAll('.kids_key'));
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
         window.addEventListener('keydown', playSound);
 

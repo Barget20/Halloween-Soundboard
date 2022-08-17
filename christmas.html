@@ -9,8 +9,9 @@
         <style>
 			body{
 				font-family: "Lato", sans-serif;
-				color: white;
+				color: #46ba46;
                 background-image: url(./images/red-2892235_1920.png);
+                background-size: cover;
 			}
 
 			.sidenav {
@@ -36,7 +37,7 @@
 			}
 
 			.sidenav a:hover {
-				color: #f1f1f1;
+				color: #46ba46;
 			}
 
 			.sidenav .closebtn {
@@ -78,57 +79,57 @@
 </head>
 
 <body>
-    <h1> Christmas Sound Board</h1>
+    <h1 style="color:#46ba46"> Christmas Sound Board</h1>
 
     <div class="christmas_keys">
 
         <div data-key="65" class="xmas_key">
             <kbd>A </kbd>
-            <span class="sound">S1</span>
+            <span class="xmas_sound_text">S1</span>
         </div>
         <div data-key="83" class="xmas_key">
             <kbd>S </kbd>
-            <span class="sound">S2</span>
+            <span class="xmas_sound_text">S2</span>
         </div>
         <div data-key="68" class="xmas_key">
             <kbd>D </kbd>
-            <span class="sound">S3</span>
+            <span class="xmas_sound_text">S3</span>
         </div>
         <div data-key="70" class="xmas_key">
             <kbd>F </kbd>
-            <span class="sound">S4</span>
+            <span class="xmas_sound_text">S4</span>
         </div>
         <div data-key="71" class="xmas_key">
             <kbd>G </kbd>
-            <span class="sound">S5</span>
+            <span class="xmas_sound_text">S5</span>
         </div>
         <div data-key="72" class="xmas_key">
             <kbd>H </kbd>
-            <span class="sound">S6</span>
+            <span class="xmas_sound_text">S6</span>
         </div>
         <div data-key="74" class="xmas_key">
             <kbd>J </kbd>
-            <span class="sound">S7</span>
+            <span class="xmas_sound_text">S7</span>
         </div>
         <div data-key="75" class="xmas_key">
             <kbd>K </kbd>
-            <span class="sound">S8</span>
+            <span class="xmas_sound_text">S8</span>
         </div>
         <div data-key="76" class="xmas_key">
             <kbd>L </kbd>
-            <span class="sound">S9</span>
+            <span class="xmas_sound_text">Torture</span>
         </div>
     </div>
 
-    <audio data-key="65" src="#"></audio>
-    <audio data-key="83" src="#"></audio>
-    <audio data-key="68" src="#"></audio>
-    <audio data-key="70" src="#"></audio>
-    <audio data-key="71" src="#"></audio>
-    <audio data-key="72" src="#"></audio>
-    <audio data-key="74" src="#"></audio>
-    <audio data-key="75" src="#"></audio>
-    <audio data-key="76" src="./sounds/torture-screams-and-moans-7091.mp3"></audio>
+        <audio data-key="65" src="#"></audio>
+        <audio data-key="83" src="#"></audio>
+        <audio data-key="68" src="#"></audio>
+        <audio data-key="70" src="#"></audio>
+        <audio data-key="71" src="#"></audio>
+        <audio data-key="72" src="#"></audio>
+        <audio data-key="74" src="#"></audio>
+        <audio data-key="75" src="#"></audio>
+        <audio data-key="76" src="./sounds/torture-screams-and-moans-7091.mp3"></audio>
 
     <script>
 
@@ -141,8 +142,7 @@
             audio.currentTime= 0; //restarts to beginning, allows for multi tapping 
             audio.play();
             key.classList.add('xmas_playing');
-            // key.classList.remove('playing');
-            // key.classList.toggle('playing');
+           
         };
 
         function removeTransition(e) {
@@ -150,7 +150,7 @@
             e.target.classList.remove('xmas_playing');
         }
 
-        const keys = Array.from(document.querySelectorAll('.key'));
+        const keys = Array.from(document.querySelectorAll('.xmas_key'));
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
         window.addEventListener('keydown', playSound);
 

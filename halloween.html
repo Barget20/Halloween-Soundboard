@@ -9,8 +9,9 @@
 <style>
     body{
         font-family: "Lato", sans-serif;
-        color: white;
+        color: #ff872C;
         background-image: url(./images/halloween-5596921_1920.jpg);
+        background-size: cover;
     }
 
     .sidenav {
@@ -36,7 +37,7 @@
     }
 
     .sidenav a:hover {
-        color: #f1f1f1;
+        color: #ff872C;
     }
 
     .sidenav .closebtn {
@@ -75,45 +76,45 @@ document.getElementById("mySidenav").style.width = "0";
 </script>
 
 <body>
-    <h1> Halloween Sound Board</h1>
+    <h1 style="color:#ff872C"> Halloween Sound Board</h1>
 
     <div class="halloween_keys">
 
         <div data-key="65" class="hallo_key">
             <kbd>A </kbd>
-            <span class="sound">Am I Dead?</span>
+            <span class="hallo_sound_text">Am I Dead?</span>
         </div>
         <div data-key="83" class="hallo_key">
             <kbd>S </kbd>
-            <span class="sound">Boo & Laugh</span>
+            <span class="hallo_sound_text">Boo & Laugh</span>
         </div>
         <div data-key="68" class="hallo_key">
             <kbd>D </kbd>
-            <span class="sound">Crime Scene</span>
+            <span class="hallo_sound_text">Crime Scene</span>
         </div>
         <div data-key="70" class="hallo_key">
             <kbd>F </kbd>
-            <span class="sound">Halloween Terror</span>
+            <span class="hallo_sound_text">Halloween Terror</span>
         </div>
         <div data-key="71" class="hallo_key">
             <kbd>G </kbd>
-            <span class="sound">Eerie Laugh</span>
+            <span class="hallo_sound_text">Eerie Laugh</span>
         </div>
         <div data-key="72" class="hallo_key">
             <kbd>H </kbd>
-            <span class="sound">Chainsaw</span>
+            <span class="hallo_sound_text">Chainsaw</span>
         </div>
         <div data-key="74" class="hallo_key">
             <kbd>J </kbd>
-            <span class="sound">Laughing Ghost</span>
+            <span class="hallo_sound_text">Laughing Ghost</span>
         </div>
         <div data-key="75" class="hallo_key">
             <kbd>K </kbd>
-            <span class="sound">The Build</span>
+            <span class="hallo_sound_text">The Build</span>
         </div>
         <div data-key="76" class="hallo_key">
             <kbd>L </kbd>
-            <span class="sound">Torture Screams</span>
+            <span class="hallo_sound_text">Torture Screams</span>
         </div>
     </div>
 
@@ -135,21 +136,32 @@ document.getElementById("mySidenav").style.width = "0";
             const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
             const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
             if(!audio) return; //stops the function from running all together
+            
+            key.classList.add('hallo_playing');
             audio.currentTime= 0; //restarts to beginning, allows for multi tapping 
             audio.play();
-            key.classList.add('hallo_playing');
+           
             // key.classList.remove('playing');
             // key.classList.toggle('playing');
-        };
+        };    
+
+        function stopSound(e) {
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+            if(dblclick) return;
+            key.classList.stop('hallo_playing');
+            }; 
 
         function removeTransition(e) {
             if (e.propertyName !== 'transform') return; //skips it if it's not a transform
             e.target.classList.remove('hallo_playing');
-        }
+        };
 
-        const keys = Array.from(document.querySelectorAll('.key'));
+        const keys = Array.from(document.querySelectorAll('.hallo_key'));
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
         window.addEventListener('keydown', playSound);
+
+
 
     </script>
    
