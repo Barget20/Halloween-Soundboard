@@ -34,7 +34,7 @@ p {
     margin: 1rem;
     padding: 1rem .5rem;
     transition: all 2.5s ease;
-    width: 10rem;
+    width: 12rem;
     text-align: center;
     color: #ff872C;
     background: rgba(0,0,0,0.4);
@@ -53,7 +53,7 @@ kbd {
 }
 
 .hallo_sound_text {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: #fe612C;
@@ -75,7 +75,7 @@ kbd {
     margin: 1rem;
     padding: 1rem .5rem;
     transition: all 2.5s ease;
-    width: 10rem;
+    width: 12rem;
     text-align: center;
     color: #46ba46;
     background: rgba(0,0,0,0.4);
@@ -94,7 +94,7 @@ kbd {
 }
 
 .xmas_sound_text {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: #46ba46;
@@ -120,7 +120,7 @@ kbd {
     margin: 1rem;
     padding: 1rem .5rem;
     transition: all 2.5s ease;
-    width: 10rem;
+    width: 12rem;
     text-align: center;
     color: yellow;
     background: rgba(0,0,0,0.4);
@@ -139,7 +139,7 @@ kbd {
 }
 
 .kids_sound_text {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: yellow;
